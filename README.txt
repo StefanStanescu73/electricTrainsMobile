@@ -3,7 +3,7 @@ Hello everyone!
 This is my first front-end project.
 The purpose of this project is not a commercial one but only for the implementation of HTML5, CSS3, and JavaScript knowledge
 acquired during the Front-End Web Development course at STEP IT Romania Academy.
-Version V1.0.0 is for desktop only, but I will soon release a mobile version.
+This version is for desktop, and @media screen and (max-width: 500px).
 
 1. HTML pages:
 
