@@ -1,0 +1,16 @@
+.contentPage {
+  margin: 20px 60px 290px 60px;
+  color: #ff2c00;
+}
+
+@media screen and (max-width: 500px) {
+  .contentPage {
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    border: 1px solid #003190;
+    box-shadow: 0 0 5px 0 #003190;
+    border-radius: 5px;
+  }
+}

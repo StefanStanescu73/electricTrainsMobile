@@ -1,0 +1,45 @@
+.contentPage {
+  margin: 10px 50px 35px 50px;
+}
+
+h3.mainTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #003190;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p.text {
+  font-size: 16px;
+  color: #616060;
+}
+
+a {
+  text-decoration: none;
+  color: #003190;
+}
+
+@media screen and (max-width: 500px) {
+  div.contentPage {
+    border: 0.5px solid #003190;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 #003190;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  h3.mainTitle {
+    padding-left: 10px;
+  }
+
+  div.info {
+    padding: 10px;
+  }
+}

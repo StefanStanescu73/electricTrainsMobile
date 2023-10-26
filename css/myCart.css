@@ -1,0 +1,332 @@
+.contentPage {
+  margin: 25px 50px;
+}
+
+.contentMyCart {
+  background-color: #f2f2f7;
+  margin: 25px 50px 25px 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 #616060;
+}
+
+h2#mainTitleCart {
+  color: #003190;
+  margin: 25px 0 25px 50px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+th {
+  color: #003190;
+  font-weight: bold;
+}
+
+h3.productName {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+span.productCode {
+  border: 0.5px solid #3871e2;
+  border-radius: 5px;
+  background-color: #3871e2;
+  color: #fff;
+  padding: 0 7.5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#tableBody td {
+  padding: 0 20px;
+  text-align: center;
+  color: #003190;
+}
+
+.promoPrice,
+.subtotalPrice {
+  width: 70px;
+  font-weight: bold;
+}
+
+.titleProductCart {
+  width: 665px;
+}
+
+.contentMyCart a {
+  text-decoration: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 1;
+  cursor: pointer;
+}
+
+input[type="number"] {
+  border: 1px solid #003190;
+  box-shadow: 0 0 5px 0 #003190;
+  border-radius: 5px;
+  margin-left: 5px;
+  color: #003190;
+  font-weight: bold;
+  text-align: center;
+}
+
+td.deleteProductCart i {
+  color: #003190;
+  cursor: pointer;
+}
+
+.grandTotal {
+  position: absolute;
+  width: 205px;
+  right: 45px;
+  top: 10px;
+  color: #003190;
+}
+
+.grandTotal p {
+  margin: 0;
+}
+
+tbody#tableBody tr:hover {
+  background-color: #ccc;
+}
+
+.buttonsMyCart {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 20px;
+  height: 75px;
+}
+
+.orderCompletion {
+  display: flex;
+  margin-left: 20px;
+}
+
+.buttonsMyCart input[type="text"] {
+  border: 1px solid #003190;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #003190;
+  box-shadow: 0 0 5px 0 #003190;
+  width: 150px;
+  height: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+}
+
+#imgMyCart1 {
+  position: absolute;
+  left: 300px;
+  top: 35px;
+}
+
+#imgMyCart2 {
+  position: absolute;
+  left: 660px;
+  top: 35px;
+}
+
+.buttonsMyCart a,
+.orderCompletion a {
+  font-size: 13.3333px;
+  border: 1px solid #003190;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #003190;
+  box-shadow: 0 0 5px 0 #003190;
+  margin: 0 10px;
+  padding: 4px;
+}
+
+.orderCompletion a {
+  margin: 0 15px 20px 0;
+}
+
+.buttonsMyCart a:hover,
+.orderCompletion a:hover {
+  border: 1px solid #3871e2;
+  box-shadow: 0 0 5px 0 #3871e2;
+  background-color: #3871e2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.buttonsInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px 50px 80px 50px;
+}
+
+.buttonsInfo a {
+  width: 200px;
+  padding: 23.5px 0;
+  border: 0.5px solid #f2f2f7;
+  box-shadow: 0 0 5px 0 #616060;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #f2f2f7;
+  color: #003190;
+  font-weight: bold;
+}
+
+.buttonsInfo a:hover {
+  border: 0.5px solid #3871e2;
+  background-color: #3871e2 !important;
+  color: #fff !important;
+  cursor: pointer;
+}
+
+.dropdown2 {
+  position: relative;
+}
+
+button.dropbtn2 {
+  width: 200px;
+  padding: 23.5px 0;
+  border: 0.5px hidden #f2f2f7;
+  box-shadow: 0 0 5px 0 #616060;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f2f2f7;
+  color: #003190;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dropdownContent2 {
+  display: none;
+  position: absolute;
+  width: 200px;
+  border: 0.5px solid #f2f2f7;
+  box-shadow: 0 0 5px 0 #616060;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f2f2f7;
+  color: #003190;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.dropdownContent2 p {
+  color: #003190;
+  padding: 2px;
+  display: block;
+}
+
+.dropdown2:hover .dropdownContent2 {
+  display: block;
+}
+
+button.dropbtn2:hover {
+  background-color: #3871e2;
+  cursor: pointer;
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  margin-top: -47.5px;
+  margin-bottom: 55px;
+}
+
+@media screen and (max-width: 500px) {
+  .contentPage {
+    margin: 10px;
+  }
+
+  h2#mainTitleCart {
+    margin-left: 10px;
+  }
+
+  div.contentMyCart {
+    margin: 0;
+  }
+
+  tr :nth-child(1),
+  tr :nth-child(4) {
+    padding: 5px !important;
+  }
+
+  tr :nth-child(2),
+  tr :nth-child(5) {
+    display: none;
+  }
+
+  tr :nth-child(6) {
+    padding-left: 15.5px;
+    padding-right: 15.5px;
+  }
+
+  td.deleteProductCart > i {
+    font-size: 20px;
+  }
+
+  img#imgMyCart1,
+  img#imgMyCart2 {
+    position: relative;
+    left: -200px;
+    top: 125px;
+    margin-left: 20px;
+  }
+
+  input#voucher {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    left: 200px;
+    top: 0px;
+  }
+
+  div.buttonsMyCart > a {
+    position: relative;
+    left: 225px;
+    top: 0px;
+  }
+
+  .grandTotal {
+    position: absolute;
+    width: 205px;
+    left: 0px;
+    top: 5px;
+  }
+
+  div.orderCompletion {
+    position: relative;
+    left: 200px;
+    top: 5px;
+    width: 54.5%;
+  }
+
+  div.buttonsInfo {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  div.buttonsInfo > a {
+    width: 40%;
+    height: 30px;
+    margin: 10px 15px 10px 15px;
+  }
+
+  div.buttonsInfo > div.dropdown2 {
+    order: +1;
+    margin-top: 10px;
+  }
+
+  .brand {
+    margin-top: -75px;
+    margin-bottom: 0px;
+  }
+}

@@ -1,0 +1,226 @@
+.contentPage {
+  margin: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid #003190;
+  box-shadow: 0 0 5px 0 #003190;
+  border-radius: 5px;
+  background-color: #f2f2f7;
+}
+
+#productCheckout {
+  display: flex;
+  justify-content: center;
+}
+
+h2#mainTitleCheckout {
+  color: #003190;
+  margin: 10px 0 0px 20px;
+}
+
+a#btnBackCheckout {
+  width: 65px;
+  border: 0.5px solid #003190;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 #003190;
+  padding: 2.5px 0;
+  margin: 10px 0 20px 20px;
+  background-color: #fff;
+  color: #003190;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+a#btnBackCheckout:hover {
+  border: 0.5px solid #3871e2;
+  background-color: #3871e2;
+  color: #fff;
+  box-shadow: none;
+}
+
+table,
+th,
+td {
+  border: 0.5px solid #003190;
+  border-radius: 5px;
+}
+
+table {
+  box-shadow: 0 0 8px #003190;
+}
+
+th {
+  color: #003190;
+  font-weight: bold;
+}
+
+.productImage img {
+  margin-top: 3px;
+  border: 0.5px solid #003190;
+}
+
+h3.productName {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+span.productCode {
+  border: 0.5px solid #3871e2;
+  border-radius: 5px;
+  background-color: #3871e2;
+  color: #fff;
+  padding: 0 7.5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#tableBody td {
+  padding: 0 20px;
+  text-align: center;
+  color: #003190;
+}
+
+.promoPrice {
+  font-weight: bold;
+}
+
+.titleProductCart {
+  width: 665px;
+}
+
+tbody#tableBody tr:hover {
+  background-color: #ccc;
+}
+
+#formCheckout {
+  display: flex;
+  justify-content: space-between;
+  margin: 17.5px 20px 2.5px 20px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+}
+
+h3.subtitleCheckout {
+  font-size: 16px;
+  color: #003190;
+  margin-bottom: 10px;
+}
+
+#formCheckout label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #003190;
+}
+
+#formCheckout input[type="text"],
+#formCheckout input[type="tel"] {
+  border: 0.5px solid #003190;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 0 #003190;
+  width: 150px;
+  height: 25px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#formCheckout input[type="text"]#deliveryAddress {
+  width: 300px;
+}
+
+#formCheckout input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+div#selectTransport {
+  margin-right: 92.5px;
+}
+
+div.inputTransport {
+  display: flex;
+  align-items: center;
+}
+
+div.inputTransport > label {
+  margin-left: 5px;
+}
+
+#grandTotalCheckout {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 155px;
+  bottom: 32.5px;
+  color: #003190;
+}
+
+div#validationCmd {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+a.sendCommand {
+  width: 110px;
+  border: 1px solid #003190;
+  box-shadow: 0 0 5px 0 #003190;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #fff;
+  color: #003190;
+  font-size: 13.5px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+a.sendCommand:hover {
+  border: 0.5px solid #3871e2;
+  background-color: #3871e2;
+  box-shadow: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .contentPage {
+    margin: 10px;
+  }
+
+  div.contentMyCart {
+    padding-left: 10px;
+  }
+
+  table {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  tr :nth-child(2) {
+    display: none;
+  }
+
+  form#formCheckout {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 98% !important;
+    height: 35px !important;
+  }
+
+  div#grandTotalCheckout {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

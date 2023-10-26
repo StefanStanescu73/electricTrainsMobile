@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ElectricTrainsSH.ro</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/globalStyle.css" />
+    <link rel="stylesheet" href="css/productPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="js/global.js" defer></script>
+    <script src="js/productPage.js" defer></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="dropdown">
+        <button id="dropBtn"><i class="fa fa-bars"></i></button>
+        <div class="dropdownContent">
+          <a class="btnHeader" href="index.html"> Acasă</a>
+          <a class="btnHeader" href="promotions.html">Promoții</a>
+          <a class="btnHeader" href="locomotives.html">Locomotive</a>
+          <a class="btnHeader" href="wagons.html">Vagoane</a>
+          <a class="btnHeader" href="infrastructure.html">Infrastructură</a>
+          <a class="btnHeader" href="contact.html"> Contact</a>
+          <a class="btnHeader" href="aboutUs.html">Despre Noi</a>
+          <a
+            class="btnHeader"
+            href="https://www.facebook.com/profile.php?id=100053482028288"
+            target="_blank"
+          >
+            Facebook</a
+          >
+        </div>
+      </div>
+      <div id="pozaLogo">
+        <img id="logo" src="assets/img/Others/logoNou.png" />
+      </div>
+      <div id="searchItems">
+        <input
+          type="search"
+          id="searchBar"
+          name="searchBar"
+          placeholder=" Caută produsul dorit..."
+        />
+        <i class="fa fa-search"></i>
+      </div>
+      <div id="headerUpRight">
+        <a class="btnHeader" href="myAccount.html"
+          ><i class="fa fa-user"></i
+          ><span id="textMyAccount"> Contul meu</span></a
+        >
+        <a class="btnHeader" href="favorite.html"
+          ><i class="fa fa-heart"></i><span id="textFav"> Favorite</span
+          ><span id="productsInFavorite1">[10]</span></a
+        >
+        <a class="btnHeader" href="myCart.html"
+          ><i class="fa fa-shopping-cart contor"></i
+          ><span id="textCart"> Coș</span>
+          <span id="productsInTheCart1">[2]</span></a
+        >
+      </div>
+      <div id="headerDown">
+        <a class="btnHeader" href="index.html"
+          ><i class="fa fa-home"></i> Acasă</a
+        >
+        <a class="btnHeader" href="promotions.html">Promoții</a>
+        <a class="btnHeader" href="locomotives.html">Locomotive</a>
+        <a class="btnHeader" href="wagons.html">Vagoane</a>
+        <a class="btnHeader" href="infrastructure.html">Infrastructură</a>
+        <div id="rightBtn">
+          <a class="btnHeader" href="contact.html"
+            ><i class="fa fa-phone"></i> Contact</a
+          >
+          <a class="btnHeader" href="aboutUs.html">Despre Noi</a>
+          <a
+            class="btnHeader"
+            href="https://www.facebook.com/profile.php?id=100053482028288"
+            target="_blank"
+            ><i class="fa fa-facebook-official"></i> Facebook</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="contentPage">
+      <a class="btnBack" href="locomotives.html"
+        ><i class="fa fa-angle-double-left"></i> Înapoi</a
+      >
+
+      <div class="contentProductSide1">
+        <div class="imgProduct">
+          <div class="mainImage">
+            <img src="assets/img/ProductPage/p1.jpg" />
+          </div>
+          <div class="secondaryImages">
+            <img src="assets/img/ProductPage/p1.1.jpg" />
+            <img src="assets/img/ProductPage/p1.2.jpg" />
+          </div>
+        </div>
+        <div class="infProduct">
+          <h3 class="nameProduct">Locomotiva diesel DS 10</h3>
+          <p>
+            <strong>Cod produs:</strong>
+            <span class="value">Loco DS10</span>
+          </p>
+
+          <div class="brandProduct">
+            <img src="assets/img/Others/brand.jpg" />
+          </div>
+
+          <div class="priceProduct">
+            <p class="regularPrice">950 Lei</p>
+            <p class="promoPrice">875 Lei <i class="fa fa-tag"></i></p>
+          </div>
+
+          <div class="addToBox">
+            <p>
+              <strong>Disponibilitate:</strong>
+              <span class="value">În stoc</span>
+            </p>
+            <label for="quantity">Cantitate: </label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="0"
+              max="10"
+              value="0"
+              onchange="orderQuantity();"
+            />
+
+            <a
+              href="myCart.html?imageProduct=assets/img/Locomotives/p1Loco.jpg&prodName=Locomotivă diesel DS 10&span1=Loco DS10&price=875&span2=Lei"
+              ><i class="fa fa-shopping-cart"></i> Adaugă în coș
+            </a>
+
+            <a
+              href="favorite.html?imageProduct=assets/img/Locomotives/p1Loco.jpg&prodName=Locomotivă diesel DS 10&price1=950Lei&price2=875Lei&mainBrand=Berliner TT Bahnen"
+              ><i class="fa fa-heart"></i> Adaugă la favorite
+            </a>
+          </div>
+
+          <strong>Descriere produs</strong>
+          <ul>
+            <li>
+              șasiu din metal, tracțiune pe toate axele, motor cu cinci poli cu
+              volantă și transmisie cardanică
+            </li>
+            <li>scara TT 1:120</li>
+            <li>interfată digitală NEM 652 (8 pini)</li>
+            <li>carcasă de rezervă albastră</li>
+            <li>interiorul cabinei reprodus</li>
+            <li>lungime 164 mm</li>
+          </ul>
+
+          <strong>Garanția produselor</strong>
+          <p>
+            Toate produsele comercializate pe site-ul ElectricTrainsSH.ro sunt
+            originale și beneficiază de garanție 12 luni
+          </p>
+        </div>
+      </div>
+
+      <div class="historyBrand">
+        <h4>Despre Berliner TT-Bahnen</h4>
+        <p>
+          Compania de stat Berliner TT-Bahnen (VEB BTTB) a fost creată în 1972
+          prin naționalizarea forțată a „Zeuke & Wegwerth KG”, un producător de
+          modele de căi ferate pentru ecartamentul TT de la Berlin Köpenick.
+        </p>
+        <p>
+          În 1990, compania a fost reprivatizată, de la VEB Berliner TT-Bahnen a
+          GmbH și Werner Zeuke a fost din nou activ ca director general. Pentru
+          a putea supraviețui pe piața occidentală a trebuit revizuită întreaga
+          gamă și a trebuit să fie publicate produse noi atractive.
+        </p>
+        <p>
+          În septembrie 1993, a fost declarat falimentul și compania Tillig din
+          Sebnitz, care fuzionase anterior cu compania Mattra, a preluat
+          TT-Bahnen din Berlin. Așa a luat ființă Berlin TT-Bahnen Pilz GmbH &
+          Co. KG.<br />Mai târziu a devenit compania Tillig Bahnen und Gleise
+          GmbH & Co. KG. De atunci numele Berliner TT-Bahnen este doar istorie.
+        </p>
+      </div>
+
+      <div class="contentProductSide2">
+        <div class="leftSide">
+          <h3 class="secondaryTitles">Rating general al produsului:</h3>
+          <span class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </span>
+          <a id="addReview" href="rating.html"
+            >Adaugă un review <i class="fa fa-angle-double-right"></i
+          ></a>
+        </div>
+
+        <div class="middleSide">
+          <a href="https://anpc.ro/" target="_blank"
+            ><img src="assets/img/Others/ANPC.jpg"
+          /></a>
+        </div>
+
+        <div class="rightSide">
+          <h3 class="secondaryTitles">Întrebări și răspunsuri produs:</h3>
+          <p style="font-size: 12px; font-weight: bold; color: #ff2c00">
+            <i class="fa fa-asterisk" style="font-size: 10px"></i>
+            întrebarea va fi afișată după moderare
+          </p>
+          <button id="askQuestion" onclick="showForm();">
+            <span id="switch">Pune o întrebare</span>
+            <i class="fa fa-angle-double-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="questionsForm">
+      <form method="post">
+        <label for="lastName" style="margin-right: 10px"
+          >Nume<span>*</span></label
+        ><br />
+        <input type="text" id="lastName" name="lastName" required /><br />
+        <label for="firstName" style="margin-right: 10px"
+          >Prenume<span>*</span></label
+        ><br />
+        <input type="text" id="firstName" name="firstName" required /><br />
+        <label for="email" style="margin-right: 10px"
+          >E-mail<span>*</span></label
+        ><br />
+        <input type="email" id="email" name="e-mail" required /><br />
+        <label for="contentQuestion">Întrebarea ta<span>*</span></label>
+        <br />
+        <select id="contentQuestion" name="contentQuestion">
+          <option value="0">Selectează întrebarea...</option>
+          <option value="Când revine produsul pe stoc?">
+            Când revine produsul pe stoc?
+          </option>
+          <option value="Produsul va avea același preț?">
+            Produsul va avea același preț?
+          </option>
+          <option value="Puteți aduce și piese de schimb pentru acest model?">
+            Puteți aduce și piese de schimb pentru acest model?
+          </option></select
+        ><br />
+        <!-- <textarea
+          id="contentQuestion"
+          name="contentQuestion"
+          required
+        ></textarea> -->
+        <br />
+        <!-- Daca folosesc button functioneaza required, dar face submit si nu mai functioneaza questionsAccordion -->
+        <a id="sendQuestion" onclick="sendQuestion(this);">
+          Trimite întrebarea<i class="fa fa-angle-double-right"></i>
+        </a>
+        <input type="reset" value="Resetează" />
+      </form>
+    </div>
+
+    <div id="userQuestions">
+      <h3 class="userQuestionsTitle">Întrebările utilizatorilor:</h3>
+    </div>
+
+    <div id="footerUp">
+      <div id="aboutUs">
+        <h4 class="sectionFooter">Despre noi</h4>
+        <p class="textFooter">
+          <strong>ElectricTrainsSH</strong> lorem ipsum dolor sit amet,
+          consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+          massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+          eu, pretium quis, sem.Nulla.
+        </p>
+        <a class="btnFooterLeft" href="aboutUs.html"
+          >Despre noi <i class="fa fa-angle-double-right"></i
+        ></a>
+      </div>
+      <div id="otherData">
+        <h4 class="sectionFooter">Comenzi și transport</h4>
+        <a class="linkFooter" href="orderProcessing.html" target="_blank">
+          Procesarea comenzilor și livrarea coletelor
+        </a>
+        <a class="linkFooter" href="">Costuri de transport</a>
+        <a class="linkFooter" href="">Plata online cu cardul</a>
+      </div>
+      <div id="usefulData">
+        <h4 class="sectionFooter">Date utile</h4>
+        <a class="linkFooter" href="">Termeni și condiții</a>
+        <a class="linkFooter" href="">Politica cookies</a>
+        <a class="linkFooter" href="https://anpc.ro/" target="_blank"
+          >Link ANPC</a
+        >
+        <a class="linkFooter" href="gdpr.html" target="_blank">Politica GDPR</a>
+        <a class="linkFooter" href="">Politica de retur</a>
+      </div>
+      <div id="contactData">
+        <h4 class="sectionFooter">Date de contact</h4>
+        <p class="textFooter"><strong>Adresă magazin</strong></p>
+        <p class="textFooter">Strada Eufrosina Popescu, Bucuresti</p>
+        <p class="textFooter"><strong>Telefon</strong></p>
+        <p class="textFooter">
+          <a class="linkFooter" href="tel:0752.272.273">0753.xxx.xxx</a>
+        </p>
+        <p class="textFooter"><strong>Adresă e-mail</strong></p>
+        <p class="textFooter">
+          <a class="linkFooter" href="mailto:electric.trainsSH@gmail.com"
+            >electric.trainsSH@gmail.com</a
+          >
+        </p>
+        <div class="socialMedia">
+          <a class="btnFooterRight" href="contact.html"
+            >Contact <i class="fa fa-angle-double-right"></i
+          ></a>
+          <a
+            class="iconSocialMediaBlue"
+            href="https://www.facebook.com/profile.php?id=100053482028288"
+            target="_blank"
+            ><i class="fa fa-facebook-square"></i
+          ></a>
+          <a
+            class="iconSocialMediaBlue"
+            href="https://twitter.com/?lang=en"
+            target="_blank"
+            ><i class="fa fa-twitter-square"></i
+          ></a>
+          <a
+            class="iconSocialMediaRed"
+            href="https://www.youtube.com/"
+            target="_blank"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="footerDown">
+      <p id="curentYear"></p>
+    </div>
+  </body>
+</html>

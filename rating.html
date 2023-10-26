@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ElectricTrainsSH.ro</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/globalStyle.css" />
+    <link rel="stylesheet" href="css/rating.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="js/global.js" defer></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="dropdown">
+        <button id="dropBtn"><i class="fa fa-bars"></i></button>
+        <div class="dropdownContent">
+          <a class="btnHeader" href="index.html"> Acasă</a>
+          <a class="btnHeader" href="promotions.html">Promoții</a>
+          <a class="btnHeader" href="locomotives.html">Locomotive</a>
+          <a class="btnHeader" href="wagons.html">Vagoane</a>
+          <a class="btnHeader" href="infrastructure.html">Infrastructură</a>
+          <a class="btnHeader" href="contact.html"> Contact</a>
+          <a class="btnHeader" href="aboutUs.html">Despre Noi</a>
+          <a
+            class="btnHeader"
+            href="https://www.facebook.com/profile.php?id=100053482028288"
+            target="_blank"
+          >
+            Facebook</a
+          >
+        </div>
+      </div>
+      <div id="pozaLogo">
+        <img id="logo" src="assets/img/Others/logoNou.png" />
+      </div>
+      <div id="searchItems">
+        <input
+          type="search"
+          id="searchBar"
+          name="searchBar"
+          placeholder=" Caută produsul dorit..."
+        />
+        <i class="fa fa-search"></i>
+      </div>
+      <div id="headerUpRight">
+        <a class="btnHeader" href="myAccount.html"
+          ><i class="fa fa-user"></i
+          ><span id="textMyAccount"> Contul meu</span></a
+        >
+        <a class="btnHeader" href="favorite.html"
+          ><i class="fa fa-heart"></i><span id="textFav"> Favorite</span
+          ><span id="productsInFavorite1">[10]</span></a
+        >
+        <a class="btnHeader" href="myCart.html"
+          ><i class="fa fa-shopping-cart contor"></i
+          ><span id="textCart"> Coș</span>
+          <span id="productsInTheCart1">[2]</span></a
+        >
+      </div>
+      <div id="headerDown">
+        <a class="btnHeader" href="index.html"
+          ><i class="fa fa-home"></i> Acasă</a
+        >
+        <a class="btnHeader" href="promotions.html">Promoții</a>
+        <a class="btnHeader" href="locomotives.html">Locomotive</a>
+        <a class="btnHeader" href="wagons.html">Vagoane</a>
+        <a class="btnHeader" href="infrastructure.html">Infrastructură</a>
+        <div id="rightBtn">
+          <a class="btnHeader" href="contact.html"
+            ><i class="fa fa-phone"></i> Contact</a
+          >
+          <a class="btnHeader" href="aboutUs.html">Despre Noi</a>
+          <a
+            class="btnHeader"
+            href="https://www.facebook.com/profile.php?id=100053482028288"
+            target="_blank"
+            ><i class="fa fa-facebook-official"></i> Facebook</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="mainPage">
+      <a class="btnBack" href="productPage.html"
+        ><i class="fa fa-angle-double-left"></i> Înapoi</a
+      >
+      <div class="contentPage">
+        <div class="leftSide">
+          <h3 class="titles">
+            Faci review la:
+            <span class="decoration">Locomotiva diesel Zeuke Bahmen T334</span>
+          </h3>
+          <p class="text">Cum evaluezi acest produs?</p>
+          <div class="starRating">
+            <span class="decoration">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </span>
+          </div>
+          <form method="post">
+            <label class="ratingLabel" for="lastName"
+              >Nume<span class="decoration">*</span></label
+            ><br />
+            <input type="text" id="lastName" name="lastName" required /><br />
+            <label class="ratingLabel" for="firstName"
+              >Prenume<span class="decoration">*</span></label
+            ><br />
+            <input type="text" id="firstName" name="firstName" required /><br />
+            <label class="ratingLabel" for="email"
+              >E-mail<span class="decoration">*</span></label
+            ><br />
+            <input type="email" id="email" name="e-mail" required /><br />
+            <label class="ratingLabel" for="contentReview"
+              >Review-ul tău<span class="decoration">*</span></label
+            >
+            <br />
+            <textarea
+              id="contentReview"
+              name="contentReview"
+              required
+            ></textarea
+            ><br />
+            <button id="sendReview">
+              Trimite review<i class="fa fa-angle-double-right"></i>
+            </button>
+            <input type="reset" value="Resetează" />
+          </form>
+        </div>
+
+        <div class="rightSide">
+          <h3 class="titles">
+            <span class="decoration">Părerea ta este importantă!</span>
+          </h3>
+          <p class="text">
+            Ajută-i pe alții cu o părere sinceră despre acest produs.
+          </p>
+          <ul>
+            <li>Se ridică la nivelul așteptărilor tale?</li>
+            <li>Ești mulțumit(ă) de calitate având în vedere prețul plătit?</li>
+            <li>Ai recomanda și altora produsul?</li>
+            <li>Ce avantaje și/sau dezavantaje ai observat la produs?</li>
+            <li>Pe ce perioadă și/sau de cate ori ai folosit produsul?</li>
+            <li>Ți-ai fi dorit să aibă sau să ofere ceva in plus?</li>
+          </ul>
+          <p class="text">
+            Toate review-urile, fie ele pozitive sau negative vor fi postate pe
+            site.
+          </p>
+          <p class="text2">Îți mulțumim!</p>
+          <div class="legal">
+            <a href="https://anpc.ro" target="_blank">
+              <img src="assets/img/Others/ANPC.jpg" />
+            </a>
+            <a
+              href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO"
+              target="_blank"
+              ><img src="assets/img/Others/x-sol.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footerUp">
+      <div id="aboutUs">
+        <h4 class="sectionFooter">Despre noi</h4>
+        <p class="textFooter">
+          <strong>ElectricTrainsSH</strong> lorem ipsum dolor sit amet,
+          consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+          massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+          eu, pretium quis, sem.Nulla.
+        </p>
+        <a class="btnFooterLeft" href="aboutUs.html"
+          >Despre noi <i class="fa fa-angle-double-right"></i
+        ></a>
+      </div>
+      <div id="otherData">
+        <h4 class="sectionFooter">Comenzi și transport</h4>
+        <a class="linkFooter" href="orderProcessing.html" target="_blank">
+          Procesarea comenzilor și livrarea coletelor
+        </a>
+        <a class="linkFooter" href="">Costuri de transport</a>
+        <a class="linkFooter" href="">Plata online cu cardul</a>
+      </div>
+      <div id="usefulData">
+        <h4 class="sectionFooter">Date utile</h4>
+        <a class="linkFooter" href="">Termeni și condiții</a>
+        <a class="linkFooter" href="">Politica cookies</a>
+        <a class="linkFooter" href="https://anpc.ro/" target="_blank"
+          >Link ANPC</a
+        >
+        <a class="linkFooter" href="gdpr.html" target="_blank">Politica GDPR</a>
+        <a class="linkFooter" href="">Politica de retur</a>
+      </div>
+      <div id="contactData">
+        <h4 class="sectionFooter">Date de contact</h4>
+        <p class="textFooter"><strong>Adresă magazin</strong></p>
+        <p class="textFooter">Strada Eufrosina Popescu, Bucuresti</p>
+        <p class="textFooter"><strong>Telefon</strong></p>
+        <p class="textFooter">
+          <a class="linkFooter" href="tel:0752.272.273">0753.xxx.xxx</a>
+        </p>
+        <p class="textFooter"><strong>Adresă e-mail</strong></p>
+        <p class="textFooter">
+          <a class="linkFooter" href="mailto:electric.trainsSH@gmail.com"
+            >electric.trainsSH@gmail.com</a
+          >
+        </p>
+        <div class="socialMedia">
+          <a class="btnFooterRight" href="contact.html"
+            >Contact <i class="fa fa-angle-double-right"></i
+          ></a>
+          <a
+            class="iconSocialMediaBlue"
+            href="https://www.facebook.com/profile.php?id=100053482028288"
+            target="_blank"
+            ><i class="fa fa-facebook-square"></i
+          ></a>
+          <a
+            class="iconSocialMediaBlue"
+            href="https://twitter.com/?lang=en"
+            target="_blank"
+            ><i class="fa fa-twitter-square"></i
+          ></a>
+          <a
+            class="iconSocialMediaRed"
+            href="https://www.youtube.com/"
+            target="_blank"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="footerDown">
+      <p id="curentYear"></p>
+    </div>
+  </body>
+</html>

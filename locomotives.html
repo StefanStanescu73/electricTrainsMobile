@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ElectricTrainsSH.ro</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/globalStyle.css" />
+    <link rel="stylesheet" href="css/productSection.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="js/dataBase.js" defer></script>
+    <script src="js/locomotives.js" defer></script>
+    <script src="js/global.js" defer></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="dropdown">
+        <button id="dropBtn"><i class="fa fa-bars"></i></button>
+        <div class="dropdownContent">
+          <a class="btnHeader" href="index.html"> Acasă</a>
+          <a class="btnHeader" href="promotions.html">Promoții</a>
+          <a class="btnHeader" href="locomotives.html">Locomotive</a>
+          <a class="btnHeader" href="wagons.html">Vagoane</a>
+          <a class="btnHeader" href="infrastructure.html">Infrastructură</a>
+          <a class="btnHeader" href="contact.html"> Contact</a>
+          <a class="btnHeader" href="aboutUs.html">Despre Noi</a>
+          <a
+            class="btnHeader"
+            href="https://www.facebook.com/profile.php?id=100053482028288"
+            target="_blank"
+          >
+            Facebook</a
+          >
+        </div>
+      </div>
+      <div id="pozaLogo">
+        <img id="logo" src="assets/img/Others/logoNou.png" />
+      </div>
+      <div id="searchItems">
+        <input
+          type="search"
+          id="searchBar"
+          name="searchBar"
+          placeholder=" Caută produsul dorit..."
+        />
+        <i class="fa fa-search"></i>
+      </div>
+      <div id="headerUpRight">
+        <a class="btnHeader" href="myAccount.html"
+          ><i class="fa fa-user"></i
+          ><span id="textMyAccount"> Contul meu</span></a
+        >
+        <a class="btnHeader" href="favorite.html"
+          ><i class="fa fa-heart"></i><span id="textFav"> Favorite</span
+          ><span id="productsInFavorite1">[10]</span></a
+        >
+        <a class="btnHeader" href="myCart.html"
+          ><i class="fa fa-shopping-cart contor"></i
+          ><span id="textCart"> Coș</span>
+          <span id="productsInTheCart1">[2]</span></a
+        >
+      </div>
+      <div id="headerDown">
+        <a class="btnHeader" href="index.html"
+          ><i class="fa fa-home"></i> Acasă</a
+        >
+        <a class="btnHeader" href="promotions.html">Promoții</a>
+        <a class="btnHeader selected" href="locomotives.html">Locomotive</a>
+        <a class="btnHeader" href="wagons.html">Vagoane</a>
+        <a class="btnHeader" href="infrastructure.html">Infrastructură</a>
+        <div id="rightBtn">
+          <a class="btnHeader" href="contact.html"
+            ><i class="fa fa-phone"></i> Contact</a
+          >
+          <a class="btnHeader" href="aboutUs.html">Despre Noi</a>
+          <a
+            class="btnHeader"
+            href="https://www.facebook.com/profile.php?id=100053482028288"
+            target="_blank"
+            ><i class="fa fa-facebook-official"></i> Facebook</a
+          >
+        </div>
+      </div>
+    </div>
+    <h3 class="mainTitleForMobile"># Categoria Locomotive</h3>
+    <div class="contentPage">
+      <div class="leftSide">
+        <h3 class="mainTitleLoco"># Locomotive</h3>
+
+        <!-- Filters for max-width:500px -->
+
+        <div class="filtersForMobile">
+          <form id="formForMobile">
+            <label for="locoType">Tip locomotivă:</label>
+            <select
+              name=""
+              id="locoType"
+              class="type"
+              onchange="chooseFilter(this);"
+            >
+              <option value="0">Selectează...</option>
+              <option value="1">Locomotive electrice</option>
+              <option value="2">Locomotive diesel</option>
+              <option value="3">Locomotive cu abur</option>
+            </select>
+
+            <label for="locoPackage">Stare ambalaj produs:</label>
+            <select
+              name=""
+              id="locoPackage"
+              class="package"
+              onchange="chooseFilter(this);"
+            >
+              <option value="0">Selectează...</option>
+              <option value="4">Ambalaj intact</option>
+              <option value="5">Ambalaj deteriorat</option>
+              <option value="6">Fără ambalaj</option>
+            </select>
+
+            <label for="locoStatus">Produse:</label>
+            <select
+              name=""
+              id="locoStatus"
+              class="status"
+              onchange="chooseFilter(this);"
+            >
+              <option value="0">Selectează...</option>
+              <option value="7">Promoții</option>
+              <option value="8">Pe stoc</option>
+              <option value="9">Lipsă stoc</option>
+            </select>
+
+            <label for="locoPrice">Preț:</label>
+            <select
+              name=""
+              id="locoPrice"
+              class="price"
+              onchange="chooseFilter(this);"
+            >
+              <option value="0">Selectează...</option>
+              <option value="10">0 Lei - 50 Lei</option>
+              <option value="11">51 Lei- 500 Lei</option>
+              <option value="12">501 Lei - 1000 Lei</option>
+              <option value="13">1001 Lei - 2000 Lei</option>
+            </select>
+
+            <div class="resetButtonLoco">
+              <input
+                type="reset"
+                value="Resetare filtre"
+                onclick="resetFilter()"
+              />
+            </div>
+          </form>
+        </div>
+
+        <!-- Filters for full width(Desktop)  -->
+
+        <div class="filters">
+          <form name="formFilters">
+            <div class="firstFilter">
+              <fieldset>
+                <legend>Tip locomotivă</legend>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="electricLocomotive"
+                    name="electricLocomotive"
+                    value="accepted"
+                    onchange="selectElectricClass()"
+                  />
+                  <label for="electricLocomotive">Locomotive electrice</label>
+                </div>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="dieselLocomotive"
+                    name="dieselLocomotive"
+                    value="accepted"
+                    onchange="selectDieselClass()"
+                  />
+                  <label for="dieselLocomotive">Locomotive diesel</label>
+                </div>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="steamLocomotive"
+                    name="steamLocomotive"
+                    value="accepted"
+                    onchange="selectSteamClass()"
+                  />
+                  <label for="steamLocomotive">Locomotive cu abur</label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="secondFilter">
+              <fieldset>
+                <legend>Stare ambalaj produs</legend>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="packagedProduct"
+                    name="packagedProduct"
+                    value="accepted"
+                    onchange="selectPackagedProduct()"
+                  />
+                  <label for="packagedProduct">Ambalaj intact</label>
+                </div>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="damagedPackaging"
+                    name="damagedPackaging"
+                    value="accepted"
+                    onchange="selectDamagedPackaging()"
+                  />
+                  <label for="damagedPackaging">Ambalaj deteriorat</label>
+                </div>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="unpackedProduct"
+                    name="unpackedProduct"
+                    value="accepted"
+                    onchange="selectUnpackedProduct()"
+                  />
+                  <label for="unpackedProduct">Fără ambalaj</label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="thirdFilter">
+              <fieldset>
+                <legend>Produse</legend>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="promo"
+                    name="promo"
+                    value="accepted"
+                    onchange="selectPromoPrice()"
+                  />
+                  <label for="promo">Promoții</label>
+                </div>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="inStock"
+                    name="inStock"
+                    value="accepted"
+                  />
+                  <label for="inStock">Pe stoc</label>
+                </div>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="stockShortage"
+                    name="stockShortage"
+                    value="accepted"
+                  />
+                  <label for="stockShortage">Lipsă stoc</label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="fourthFilter">
+              <fieldset>
+                <legend>Preț</legend>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="priceRange1"
+                    name="priceRange1"
+                    value="accepted"
+                    onchange="selectPriceRange1()"
+                  />
+                  <label for="priceRange1">0 Lei - 50 Lei</label>
+                </div>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="priceRange2"
+                    name="priceRange2"
+                    value="accepted"
+                    onchange="selectPriceRange2()"
+                  />
+                  <label for="priceRange2">51 Lei- 500 Lei</label>
+                </div>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="priceRange3"
+                    name="priceRange3"
+                    value="accepted"
+                    onchange="selectPriceRange3()"
+                  />
+                  <label for="priceRange3">501 Lei - 1000 Lei</label>
+                </div>
+                <div class="selectSegment">
+                  <input
+                    type="checkbox"
+                    id="priceRange4"
+                    name="priceRange4"
+                    value="accepted"
+                    onchange="selectPriceRange4()"
+                  />
+                  <label for="priceRange4">1001 Lei - 2000 Lei</label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="resetButtonLoco">
+              <input
+                type="reset"
+                value="Resetare filtre"
+                onclick="resetFilter()"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="rightSide">
+        <div class="categoryBanner">
+          <img src="assets/img/Banners/bannerLoco.jpg" />
+        </div>
+
+        <div class="productSection">
+          <!-- Product 1 -->
+          <div class="infoProduct diesel packagedProduct r3">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p1Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p>
+              <span class="promoPrice"></span>
+              <a
+                onclick="orderQuantity()"
+                href="myCart.html?imageProduct=assets/img/Locomotives/p1Loco.jpg&prodName=Locomotivă diesel DS 10&span1=Loco DS10&price=875&span2=Lei&qntProduct=1"
+                ><i class="fa fa-shopping-cart iconStyle selected"></i
+              ></a>
+            </p>
+            <a class="btnProduct selected" href="productPage.html"
+              >Vezi detalii</a
+            >
+          </div>
+          <!-- Product 2 -->
+          <div class="infoProduct steam damagedPackaging r3">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p2Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p>
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 3 -->
+          <div class="infoProduct diesel damagedPackaging r3">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p3Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p>
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 4 -->
+          <div class="infoProduct electric packagedProduct regular r4">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p4Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p style="padding-top: 17px">
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 5 -->
+          <div class="infoProduct diesel unpackedProduct regular r2">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p5Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p style="padding-top: 17px">
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 6 -->
+          <div class="infoProduct diesel packagedProduct regular r3">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p6Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p style="padding-top: 17px">
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 7 -->
+          <div class="infoProduct electric unpackedProduct regular r3">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p7Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p style="padding-top: 17px">
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 8 -->
+          <div class="infoProduct steam packagedProduct regular r4">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p8Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p style="padding-top: 17px">
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 9 -->
+          <div class="infoProduct diesel packagedProduct regular r4">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p9Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p style="padding-top: 17px">
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 10 -->
+          <div class="infoProduct electric packagedProduct regular r4">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p10Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p style="padding-top: 17px">
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 11 -->
+          <div class="infoProduct diesel packagedProduct regular r3">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p11Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p style="padding-top: 17px">
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 12 -->
+          <div class="infoProduct steam packagedProduct regular r3">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p12Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p style="padding-top: 17px">
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 13 -->
+          <div class="infoProduct diesel packagedProduct regular r4">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p13Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p style="padding-top: 17px">
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 14 -->
+          <div class="infoProduct electric packagedProduct regular r4">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p14Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p style="padding-top: 17px">
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+          <!-- Product 15 -->
+          <div class="infoProduct diesel damagedPackaging r3">
+            <div class="productImage">
+              <img src="assets/img/Locomotives/p15Loco.jpg" />
+            </div>
+            <h4 class="productName"></h4>
+            <p class="productDescription"></p>
+            <p class="regularPrice"></p>
+            <p>
+              <span class="promoPrice"></span>
+              <i class="fa fa-shopping-cart iconStyle"></i>
+            </p>
+            <a class="btnProduct" href="">Vezi detalii</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footerUp">
+      <div id="aboutUs">
+        <h4 class="sectionFooter">Despre noi</h4>
+        <p class="textFooter">
+          <stLeig>ElectricTrainsSH</stLeig> lorem ipsum dolor sit amet,
+          consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+          massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+          eu, pretium quis, sem.Nulla.
+        </p>
+        <a class="btnFooterLeft" href="aboutUs.html"
+          >Despre noi <i class="fa fa-angle-double-right"></i
+        ></a>
+      </div>
+      <div id="otherData">
+        <h4 class="sectionFooter">Comenzi și transport</h4>
+        <a class="linkFooter" href="orderProcessing.html" target="_blank">
+          Procesarea comenzilor și livrarea coletelor
+        </a>
+        <a class="linkFooter" href="">Costuri de transport</a>
+        <a class="linkFooter" href="">Plata online cu cardul</a>
+      </div>
+      <div id="usefulData">
+        <h4 class="sectionFooter">Date utile</h4>
+        <a class="linkFooter" href="">Termeni și condiții</a>
+        <a class="linkFooter" href="">Politica cookies</a>
+        <a class="linkFooter" href="https://anpc.ro/" target="_blank"
+          >Link ANPC</a
+        >
+        <a class="linkFooter" href="gdpr.html" target="_blank">Politica GDPR</a>
+        <a class="linkFooter" href="">Politica de retur</a>
+      </div>
+      <div id="contactData">
+        <h4 class="sectionFooter">Date de contact</h4>
+        <p class="textFooter"><stLeig>Adresă magazin</stLeig></p>
+        <p class="textFooter">Strada Eufrosina Popescu, Bucuresti</p>
+        <p class="textFooter"><stLeig>Telefon</stLeig></p>
+        <p class="textFooter">
+          <a class="linkFooter" href="tel:0752.272.273">0753.xxx.xxx</a>
+        </p>
+        <p class="textFooter"><stLeig>Adresă e-mail</stLeig></p>
+        <p class="textFooter">
+          <a class="linkFooter" href="mailto:electric.trainsSH@gmail.com"
+            >electric.trainsSH@gmail.com</a
+          >
+        </p>
+        <div class="socialMedia">
+          <a class="btnFooterRight" href="contact.html"
+            >Contact <i class="fa fa-angle-double-right"></i
+          ></a>
+          <a
+            class="iconSocialMediaBlue"
+            href="https://www.facebook.com/profile.php?id=100053482028288"
+            target="_blank"
+            ><i class="fa fa-facebook-square"></i
+          ></a>
+          <a
+            class="iconSocialMediaBlue"
+            href="https://twitter.com/?lang=en"
+            target="_blank"
+            ><i class="fa fa-twitter-square"></i
+          ></a>
+          <a
+            class="iconSocialMediaRed"
+            href="https://www.youtube.com/"
+            target="_blank"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="footerDown">
+      <p id="curentYear"></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+.contentPage {
+  margin: 10px 60px 50px 60px;
+}
+
+h3#titleFavorite {
+  color: #003190;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+h3 button {
+  border: 0.5px solid #ff2c00;
+  box-shadow: 0 0 3px 0 #ff2c00;
+  background-color: #fff;
+  color: #ff2c00;
+  border-radius: 5px;
+  padding: 2.5px;
+  cursor: pointer;
+}
+
+h3 button:hover {
+  background-color: #ff2c00;
+  color: #fff;
+}
+
+#favoriteSection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.infoProduct {
+  position: relative;
+  width: 240px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid #003190;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 0 #003190;
+  background-image: radial-gradient(#3871e2 0.5px, #f2f2f7 0.5px);
+  background-size: 10px 10px;
+  margin-bottom: 18px;
+}
+
+.iconStyle1,
+.iconStyle2 {
+  position: absolute;
+  width: 20px;
+  font-size: 20px;
+  text-align: center;
+  padding: 2.5px;
+  border: 0.5px solid #003190;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 0 #003190;
+  background-color: #fff;
+  color: #003190;
+  cursor: pointer;
+}
+
+.iconStyle1 {
+  top: 10px;
+  left: 5px;
+}
+
+.iconStyle2 {
+  bottom: 17px;
+  right: 10px;
+  padding-left: 1.5px;
+}
+
+.iconStyle1:hover,
+.iconStyle2:hover {
+  border: 0.5px solid #3871e2;
+  background-color: #3871e2;
+  color: #fff !important;
+}
+
+h4.productName {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #003190;
+}
+
+.productImage {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.productImage img {
+  border: 0.25px solid #f2f2f7;
+  box-shadow: 0 0 3px 0 #003190;
+  border-radius: 10px;
+}
+
+p.regularPrice {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: line-through;
+  padding: 10px 0 10px 15px;
+  color: #616060;
+}
+
+p.productBrand {
+  color: #003190;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  left: 15px;
+  bottom: 20px;
+}
+
+span.promoPrice {
+  color: #ff2c00;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 0 0 15px;
+}
+
+@media screen and (max-width: 500px) {
+  div#headerUpRight {
+    max-height: 44px;
+  }
+
+  .contentPage {
+    margin: 10px 10px;
+  }
+
+  .infoProduct {
+    width: 220px;
+    height: 250px;
+  }
+}

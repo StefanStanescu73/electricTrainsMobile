@@ -1,0 +1,148 @@
+.contentPage {
+  margin: 20px 50px;
+}
+
+.contentPage label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #616060;
+  padding: 5px 0 5px 0;
+}
+
+.contentPage input[type="text"],
+.contentPage input[type="email"],
+.contentPage input[type="password"] {
+  width: 200px;
+  height: 25px;
+  border: 0.5px solid #616060;
+  border-radius: 5px;
+  background-color: #f2f2f7;
+  margin-right: 20px;
+}
+
+.contentPage input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+h3.mainTitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff2c00;
+  margin: 0px 0 10px 10px;
+}
+
+h4.otherTitles {
+  font-size: 18px;
+  font-weight: bold;
+  color: #003190;
+  margin: 0px 0 0px 10px;
+}
+
+#personalInformations,
+#loginInformations {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.userFullName,
+.userPassword,
+.checkbox {
+  display: flex;
+}
+
+.userLastName,
+.userFirstName,
+.createPassword,
+.confirmPassword {
+  display: flex;
+  flex-direction: column;
+}
+
+#btnForm {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#btnForm a,
+#btnForm button {
+  width: 93.4px;
+  padding: 2.5px;
+  border: 0.5px solid #003190;
+  box-shadow: 0 0 8px 0 #003190;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  color: #003190;
+}
+
+#btnForm a:hover,
+#btnForm button:hover {
+  border: 1px solid #fff;
+  box-shadow: 0 0 8px 0 #fff;
+  background-color: #3871e2;
+  color: #fff;
+  cursor: pointer;
+}
+
+#btnForm input[type="reset"] {
+  width: 100px;
+  padding: 2.5px;
+  border: 0.5px solid #ff2c00;
+  box-shadow: 0 0 8px 0 #ff2c00;
+  border-radius: 5px;
+  margin-right: 20px;
+  background-color: #fff;
+  color: #ff2c00;
+}
+
+#btnForm input[type="reset"]:hover {
+  border: 0.5px solid #fff;
+  box-shadow: 0 0 8px 0 #fff;
+  background-color: #ff2c00;
+  color: #fff;
+  cursor: pointer;
+}
+
+#btnForm input[type="submit"] {
+  width: 100px;
+  padding: 2.5px;
+  border: 0.5px solid #003190;
+  box-shadow: 0 0 8px 0 #003190;
+  border-radius: 5px;
+  margin-right: 20px;
+  background-color: #fff;
+}
+
+#btnForm input[type="submit"]:hover {
+  background-color: #3871e2;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .contentPage {
+    margin: 22px 10px 22px 10px;
+  }
+
+  div.userFullName,
+  div.userPassword {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h4.otherTitles {
+    margin: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 98% !important;
+    height: 40px !important;
+  }
+}

@@ -1,0 +1,286 @@
+.contentPage {
+  margin: 25px 50px 30px 50px;
+  display: flex;
+}
+
+#footerUp {
+  margin-top: 0;
+}
+
+h3.mainTitlePromo,
+h3.mainTitleLoco,
+h3.mainTitleWag,
+h3.mainTitleInfra {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff2c00;
+}
+
+h3.mainTitlePromo {
+  margin: 0px 0px 10px 60px;
+}
+
+h3.mainTitleLoco {
+  margin: 0px 0px 10px 45px;
+}
+
+h3.mainTitleWag {
+  margin: 20px 0px 10px 60px;
+}
+
+h3.mainTitleInfra {
+  margin: 20px 0px 10px 40px;
+}
+
+h3.bannerPromo {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 60px;
+  margin: 20px 0;
+}
+
+.leftSide {
+  width: 18%;
+}
+
+.filters fieldset {
+  width: 175px;
+  margin-bottom: 7.5px;
+  margin-left: 20px;
+  color: #003190;
+  background-image: radial-gradient(#3871e2 0.5px, #f2f2f7 0.5px);
+  background-size: 10px 10px;
+  border: 0.5px solid #003190;
+  box-shadow: 0 0.5px 0.5px 0.5px #003190;
+  border-radius: 5px;
+}
+
+.filters fieldset legend {
+  color: #ff2c00;
+  font-weight: bold;
+}
+
+.selectSegment {
+  display: flex;
+}
+
+.filters input[type="checkbox"] {
+  margin-right: 5px;
+  height: 26px;
+}
+
+.filters label {
+  padding: 2.5px 0;
+}
+
+.rightSide {
+  width: 82%;
+}
+
+.categoryBanner,
+.categoryBannerPromo {
+  width: 1160px;
+  height: 270px;
+  margin: 0 0 10px 0;
+}
+
+.categoryBanner img {
+  width: 100%;
+  border: 0.25px solid #003190;
+  box-shadow: 0 0 3px 0 #003190;
+  border-radius: 10px;
+}
+
+#bannerComponents {
+  height: 270px;
+  border: 0.5px solid #003190;
+  box-shadow: 0 0 3px 0 #003190;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: titleAboutUsAnime;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes titleAboutUsAnime {
+  0% {
+    background-color: #ff0000;
+  }
+  35% {
+    background-color: #ff2c00;
+  }
+  65% {
+    background-color: #0000ff;
+  }
+  100% {
+    background-color: #003190;
+  }
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+}
+
+.productSection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.infoProduct {
+  width: 19%;
+  margin-bottom: 10px;
+}
+
+.btnProduct {
+  margin: 10px 0 20px 67px;
+}
+
+.resetButtonPromo input[type="reset"],
+.resetButtonLoco input[type="reset"],
+.resetButtonWag input[type="reset"],
+.resetButtonInfra input[type="reset"] {
+  border: 0.5px solid #ff2c00;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 0 #ff2c00;
+  margin-left: 20px;
+  padding: 3px;
+  background-color: #fff;
+  color: #ff2c00;
+  width: 85px;
+  font-weight: bold;
+}
+
+.resetButtonPromo input[type="reset"] {
+  margin-top: 10px;
+}
+
+.resetButtonLoco input[type="reset"] {
+  margin-top: -5px;
+}
+
+.resetButtonWag input[type="reset"],
+.resetButtonInfra input[type="reset"] {
+  margin-top: 5px;
+}
+
+.resetButtonPromo input[type="reset"]:hover,
+.resetButtonLoco input[type="reset"]:hover,
+.resetButtonWag input[type="reset"]:hover,
+.resetButtonInfra input[type="reset"]:hover {
+  background-color: #ff2c00;
+  color: #fff;
+  cursor: pointer;
+}
+
+div.filtersForMobile,
+h3.mainTitleForMobile {
+  position: absolute;
+  top: -250px;
+  z-index: -2;
+}
+
+@media screen and (max-width: 500px) {
+  h3.mainTitleLoco,
+  h3.mainTitlePromo,
+  h3.mainTitleWag,
+  h3.mainTitleInfra {
+    display: none;
+  }
+
+  div.filters {
+    display: none;
+  }
+
+  .contentPage {
+    margin: 75px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h3.mainTitleForMobile {
+    top: 120px;
+    left: 125px;
+    z-index: 1;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff2c00;
+  }
+
+  .categoryBannerPromo,
+  .categoryBanner {
+    width: 100%;
+  }
+
+  div#bannerComponents {
+    height: 125px;
+  }
+
+  .categoryBanner > img {
+    width: 440px;
+    height: 125px;
+  }
+
+  div.filtersForMobile {
+    top: 320px;
+    left: 20px;
+    z-index: 1;
+    width: 92%;
+  }
+
+  .resetButtonPromo input[type="reset"],
+  .resetButtonLoco input[type="reset"],
+  .resetButtonWag input[type="reset"],
+  .resetButtonInfra input[type="reset"] {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+
+  form#formForMobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  select.type,
+  select.package,
+  select.status,
+  select.price {
+    height: 40px;
+    border: 0.5px solid #003190;
+    box-shadow: 0 0 3px 0 #003190;
+    border-radius: 10px;
+    color: #003190;
+  }
+
+  form#formForMobile > label {
+    color: #003190;
+    font-weight: bold;
+    padding: 7.5px 0;
+  }
+
+  div.rightSide {
+    width: 100%;
+  }
+
+  div.productSection {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 265px;
+  }
+
+  div.infoProduct {
+    width: 210px;
+    margin-bottom: 20px;
+  }
+
+  .btnProduct {
+    margin: 10px 0 20px 62px;
+  }
+}

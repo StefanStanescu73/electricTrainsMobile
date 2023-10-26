@@ -1,0 +1,119 @@
+.contentPage {
+  margin: 0px 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+h3.mainTitle {
+  font-size: 20px;
+  margin: 15px 0 15px 20px;
+  animation-name: titleAboutUsAnime;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes titleAboutUsAnime {
+  0% {
+    color: #ff0000;
+  }
+  25% {
+    color: #ff2c00;
+  }
+  50% {
+    color: #0000ff;
+  }
+  75% {
+    color: #003190;
+  }
+  100% {
+    color: #3871e2;
+  }
+}
+
+h4.otherTitles {
+  font-size: 16px;
+  font-weight: bold;
+  color: #003190;
+  margin: 15px 0 5px 0;
+}
+
+p.text {
+  font-size: 14px;
+  color: #616060;
+  padding: 7.5px 20px;
+}
+
+p.text2 {
+  font-size: 14px;
+  color: #616060;
+}
+
+p.team {
+  font-size: 16px;
+  font-style: oblique;
+  color: #ff2c00;
+}
+
+.info {
+  margin-bottom: 20px;
+  border: 0.5px solid #003190;
+  border-radius: 5px;
+  box-shadow: 0 0 8px 0 #003190;
+  background-color: #f2f2f7;
+}
+
+.infoElectricTrains {
+  width: 600px;
+  height: 310px;
+  border: 0.5px solid #003190;
+  border-radius: 5px;
+  box-shadow: 0 0 8px 0 #003190;
+  background-color: #f2f2f7;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  padding-left: 20px;
+  color: #616060;
+}
+
+.infoElectricTrains ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.infoElectricTrains ul li {
+  font-size: 14px;
+}
+
+.infoElectricTrains a {
+  color: #616060;
+  text-decoration: none;
+}
+
+.infoElectricTrains a:hover {
+  color: #003190;
+  font-weight: bold;
+}
+
+.insideShop {
+  border: 0.5px solid #003190;
+  border-radius: 5px;
+  box-shadow: 0 0 8px 0 #003190;
+  background-color: #ccc;
+  width: 600px;
+  height: 310px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+.insideShop img {
+  width: 99%;
+  height: 99%;
+  padding: 2px 1px 2px 3px;
+}
+
+@media screen and (max-width: 500px) {
+  .contentPage {
+    margin: 0px 10px;
+  }
+}

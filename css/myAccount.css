@@ -1,0 +1,126 @@
+.contentPage {
+  margin: 25px 50px;
+}
+
+h3.mainTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff2c00;
+  margin: 20px 0 20px 10px;
+}
+
+h4.otherTitles {
+  font-size: 18px;
+  font-weight: bold;
+  color: #003190;
+  margin: 10px 0 20px 10px;
+}
+
+.text {
+  font-size: 16px;
+  color: #616060;
+  padding: 10px 0 10px 10px;
+}
+
+#myAccount {
+  display: flex;
+  justify-content: space-between;
+}
+
+#leftSection,
+#rightSection {
+  display: flex;
+  flex-direction: column;
+  width: 48.5%;
+}
+
+#infoAccount {
+  border-top: 0.5px solid #ccc;
+  border-bottom: 0.5px solid #ccc;
+}
+
+.btnAccount,
+.btnAuthentication {
+  font-size: 14px;
+  width: 115px;
+  padding: 5px;
+  border: 1px solid #003190;
+  box-shadow: 0 0 8px 0 #003190;
+  border-radius: 5px;
+  color: #003190;
+  background-color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btnAccount {
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+.btnAuthentication {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.btnAccount:hover,
+.btnAuthentication:hover {
+  border: 1px solid #fff;
+  box-shadow: 0 0 8px 0 #fff;
+  background-color: #3871e2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.formLogin {
+  border-top: 0.5px solid #ccc;
+}
+
+.formLogin label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #616060;
+  margin-left: 10px;
+}
+
+.formLogin input[type="email"],
+.formLogin input[type="password"] {
+  width: 250px;
+  height: 25px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0.5px solid #616060;
+  border-radius: 5px;
+  background-color: #f2f2f7;
+}
+
+.checkboxAuthentication {
+  display: flex;
+  margin-left: 10px;
+  border-bottom: 0.5px solid #ccc;
+}
+
+.textAuthentication {
+  font-size: 14px;
+  font-weight: bold;
+  color: #616060;
+  padding: 10px 0 10px 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .contentPage {
+    margin: 0px 10px;
+  }
+
+  div#myAccount {
+    flex-direction: column;
+  }
+
+  div#leftSection,
+  div#rightSection {
+    width: 100%;
+  }
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ElectricTrainsSH.ro</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/globalStyle.css" />
+    <link rel="stylesheet" href="css/myCart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="js/global.js" defer></script>
+    <script src="js/dataBase.js" defer></script>
+    <script src="js/myCart.js" defer></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="dropdown">
+        <button id="dropBtn"><i class="fa fa-bars"></i></button>
+        <div class="dropdownContent">
+          <a class="btnHeader" href="index.html"> Acasă</a>
+          <a class="btnHeader" href="promotions.html">Promoții</a>
+          <a class="btnHeader" href="locomotives.html">Locomotive</a>
+          <a class="btnHeader" href="wagons.html">Vagoane</a>
+          <a class="btnHeader" href="infrastructure.html">Infrastructură</a>
+          <a class="btnHeader" href="contact.html"> Contact</a>
+          <a class="btnHeader" href="aboutUs.html">Despre Noi</a>
+          <a
+            class="btnHeader"
+            href="https://www.facebook.com/profile.php?id=100053482028288"
+            target="_blank"
+          >
+            Facebook</a
+          >
+        </div>
+      </div>
+      <div id="pozaLogo">
+        <img id="logo" src="assets/img/Others/logoNou.png" />
+      </div>
+      <div id="searchItems">
+        <input
+          type="search"
+          id="searchBar"
+          name="searchBar"
+          placeholder=" Caută produsul dorit..."
+        />
+        <i class="fa fa-search"></i>
+      </div>
+      <div id="headerUpRight">
+        <a class="btnHeader" href="myAccount.html"
+          ><i class="fa fa-user"></i
+          ><span id="textMyAccount"> Contul meu</span></a
+        >
+        <a class="btnHeader" href="favorite.html"
+          ><i class="fa fa-heart"></i><span id="textFav"> Favorite</span
+          ><span id="productsInFavorite1">[10]</span></a
+        >
+        <a class="btnHeader selected" href="myCart.html"
+          ><i class="fa fa-shopping-cart contor"></i
+          ><span id="textCart"> Coș</span>
+          <span id="productsInTheCart1">[2]</span></a
+        >
+      </div>
+      <div id="headerDown">
+        <a class="btnHeader" href="index.html"
+          ><i class="fa fa-home"></i> Acasă</a
+        >
+        <a class="btnHeader" href="promotions.html">Promoții</a>
+        <a class="btnHeader" href="locomotives.html">Locomotive</a>
+        <a class="btnHeader" href="wagons.html">Vagoane</a>
+        <a class="btnHeader" href="infrastructure.html">Infrastructură</a>
+        <div id="rightBtn">
+          <a class="btnHeader" href="contact.html"
+            ><i class="fa fa-phone"></i> Contact</a
+          >
+          <a class="btnHeader" href="aboutUs.html">Despre Noi</a>
+          <a
+            class="btnHeader"
+            href="https://www.facebook.com/profile.php?id=100053482028288"
+            target="_blank"
+            ><i class="fa fa-facebook-official"></i> Facebook</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="contentPage">
+      <h2 id="mainTitleCart">
+        Coș de cumpărături <span id="productsInTheCart2">[2 produse]</span>
+      </h2>
+
+      <div class="contentMyCart">
+        <table id="productCart">
+          <thead>
+            <tr>
+              <th>Imagine produs</th>
+              <th>Nume produs</th>
+              <th>Preț unitar</th>
+              <th>Cantitate</th>
+              <th>Subtotal</th>
+              <th>Șterge</th>
+            </tr>
+          </thead>
+
+          <tbody id="tableBody">
+            <tr>
+              <td class="productImage">
+                <img src="assets/img/Locomotives/p4Loco.jpg" />
+              </td>
+              <td class="titleProductCart">
+                <h3 class="productName"></h3>
+                <p>Cod produs: <span class="productCode"></span></p>
+              </td>
+              <td>
+                <p class="promoPrice"></p>
+              </td>
+              <td>
+                <input
+                  type="number"
+                  class="pA"
+                  min="1"
+                  max="10"
+                  value="1"
+                  onchange="calculateSubtotal(this);"
+                />
+              </td>
+              <td>
+                <p class="subtotalPrice"></p>
+              </td>
+              <td class="deleteProductCart">
+                <i class="fa fa-times-circle" onclick="deleteItem(this);"></i>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="productImage">
+                <img src="assets/img/Infrastructure/p3Infra.jpg" />
+              </td>
+              <td class="titleProductCart">
+                <h3 class="productName"></h3>
+                <p>Cod produs: <span class="productCode"></span></p>
+              </td>
+              <td>
+                <p class="promoPrice"></p>
+              </td>
+              <td class="productAmount">
+                <input
+                  type="number"
+                  class="pA"
+                  min="1"
+                  max="10"
+                  value="1"
+                  onchange="calculateSubtotal(this);"
+                />
+              </td>
+              <td>
+                <p class="subtotalPrice"></p>
+              </td>
+              <td class="deleteProductCart">
+                <i class="fa fa-times-circle" onclick="deleteItem(this);"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="buttonsMyCart">
+          <input
+            type="text"
+            id="voucher"
+            name="voucher"
+            placeholder="Cod voucher"
+          />
+          <a onclick="applyCode();">Aplică</a>
+          <img id="imgMyCart1" src="assets/img/Others/plati1.png" />
+          <img id="imgMyCart2" src="assets/img/Others/plati2.png" />
+          <div class="grandTotal">
+            <p>Total fară Tva: <span id="netPrice">891.00 Lei</span></p>
+            <p>Tva: <span id="tva">209.00 Lei</span></p>
+            <p>Total cu Tva: <span id="brutPrice">1100.00 Lei</span></p>
+            <p style="color: red">Reducere: <span id="discount"></span></p>
+            <p style="font-size: 18px; font-weight: bold">
+              Total general : <span id="finalCartPrice">1100.00 Lei</span>
+            </p>
+          </div>
+        </div>
+        <div class="orderCompletion">
+          <a onclick="updateCart();">Actualizează coșul</a>
+          <a href="checkout.html">Finalizare comandă</a>
+        </div>
+      </div>
+      <div class="buttonsInfo">
+        <a href="index.html" target="_blank"
+          ><i class="fa fa-shopping-basket" aria-hidden="true"></i> Gamă variată
+          de produse</a
+        >
+
+        <div class="dropdown2">
+          <button class="dropbtn2">
+            <i class="fa fa-phone-square"></i> Consultanță telefonică
+          </button>
+          <div class="dropdownContent2">
+            <p>Ne poți suna și specialiștii noștri te vor ajuta.</p>
+            <p>Comenzi: 0752.xxx.xxx</p>
+            <p>Retur și garanții : 0752.xxx.xxx</p>
+          </div>
+        </div>
+
+        <a href="orderProcessing.html" target="_blank"
+          ><i class="fa fa-info-circle" aria-hidden="true"></i> Procesarea
+          comenzilor</a
+        >
+        <a href=""
+          ><i class="fa fa-truck" aria-hidden="true"></i> Costuri de
+          transport</a
+        >
+        <a href=""
+          ><i class="fa fa-reply" aria-hidden="true"></i> Retur gratuit</a
+        >
+      </div>
+      <div class="brand">
+        <img src="assets/img/Others/brand.jpg" />
+      </div>
+    </div>
+
+    <div id="footerUp">
+      <div id="aboutUs">
+        <h4 class="sectionFooter">Despre noi</h4>
+        <p class="textFooter">
+          <stLeig>ElectricTrainsSH</stLeig> lorem ipsum dolor sit amet,
+          consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+          massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+          eu, pretium quis, sem.Nulla.
+        </p>
+        <a class="btnFooterLeft" href="aboutUs.html"
+          >Despre noi <i class="fa fa-angle-double-right"></i
+        ></a>
+      </div>
+      <div id="otherData">
+        <h4 class="sectionFooter">Comenzi și transport</h4>
+        <a class="linkFooter" href="orderProcessing.html" target="_blank">
+          Procesarea comenzilor și livrarea coletelor
+        </a>
+        <a class="linkFooter" href="">Costuri de transport</a>
+        <a class="linkFooter" href="">Plata online cu cardul</a>
+      </div>
+      <div id="usefulData">
+        <h4 class="sectionFooter">Date utile</h4>
+        <a class="linkFooter" href="">Termeni și condiții</a>
+        <a class="linkFooter" href="">Politica cookies</a>
+        <a class="linkFooter" href="https://anpc.ro/" target="_blank"
+          >Link ANPC</a
+        >
+        <a class="linkFooter" href="gdpr.html" target="_blank">Politica GDPR</a>
+        <a class="linkFooter" href="">Politica de retur</a>
+      </div>
+      <div id="contactData">
+        <h4 class="sectionFooter">Date de contact</h4>
+        <p class="textFooter"><stLeig>Adresă magazin</stLeig></p>
+        <p class="textFooter">Strada Eufrosina Popescu, Bucuresti</p>
+        <p class="textFooter"><stLeig>Telefon</stLeig></p>
+        <p class="textFooter">
+          <a class="linkFooter" href="tel:0752.272.273">0753.xxx.xxx</a>
+        </p>
+        <p class="textFooter"><stLeig>Adresă e-mail</stLeig></p>
+        <p class="textFooter">
+          <a class="linkFooter" href="mailto:electric.trainsSH@gmail.com"
+            >electric.trainsSH@gmail.com</a
+          >
+        </p>
+        <div class="socialMedia">
+          <a class="btnFooterRight" href="contact.html"
+            >Contact <i class="fa fa-angle-double-right"></i
+          ></a>
+          <a
+            class="iconSocialMediaBlue"
+            href="https://www.facebook.com/profile.php?id=100053482028288"
+            target="_blank"
+            ><i class="fa fa-facebook-square"></i
+          ></a>
+          <a
+            class="iconSocialMediaBlue"
+            href="https://twitter.com/?lang=en"
+            target="_blank"
+            ><i class="fa fa-twitter-square"></i
+          ></a>
+          <a
+            class="iconSocialMediaRed"
+            href="https://www.youtube.com/"
+            target="_blank"
+            ><i class="fa fa-youtube-play"></i
+          ></a>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="footerDown">
+      <p id="curentYear"></p>
+    </div>
+  </body>
+</html>
