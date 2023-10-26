@@ -155,7 +155,7 @@ document.getElementsByClassName('productName')[0].innerHTML = product1Loco.produ
 document.getElementsByClassName('productDescription')[0].innerHTML = product1Loco.productDescription;
 document.getElementsByClassName('regularPrice')[0].innerHTML = product1Loco.regularPrice + " Lei";
 document.getElementsByClassName('promoPrice')[0].innerHTML = product1Loco.promoPrice + " Lei";
-// document.getElementsByClassName('productImage')[1].innerHTML = "<img src=" + product1Loco.productImage + ">";
+// document.getElementsByClassName('productImage')[0].innerHTML = "<img src=" + product1Loco.productImage + ">";
 
 document.getElementsByClassName('productName')[1].innerHTML = product2Loco.productName;
 document.getElementsByClassName('productDescription')[1].innerHTML = product2Loco.productDescription;
